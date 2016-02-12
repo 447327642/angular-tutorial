@@ -6,3 +6,26 @@ body {
 a {
   color: #00B7FF;
 }
+
+#userList {
+	margin: 5px;
+	margin-top: 40px;
+}
+
+.users {
+	padding: 5px 10px;
+	background-color: #cdcdcd;
+	opacity: 0.6;
+	border-radius: 10px;
+	margin: 5px 0 5px 0;
+	float: left;
+	width: 100%;
+}
+
+.user {
+	font-size: 18px;
+	color: #000;
+	display: inline-table;
+	width: 100%;
+}
+

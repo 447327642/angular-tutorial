@@ -1,4 +1,13 @@
 div#lobbyPage(ng-controller='lobbyPageController')
 	h1 Welcome {{ username }}
 
-	
+	div(ng-controller='userController')
+		div.col-lg-2
+			select.form-control#orderSelect(ng-model="order", ng-options="option.id for option in orderOptions track by option.id")
+		div.col-lg-2
+			select.form-control#upOrDown(ng-model="direction", ng-options="option.name for option in dirOptions track by option.id")
+		div#userList
+			div.users.user(ng-repeat="user in users | orderBy: order.id : direction.id")
+				div.username {{ user.username }}
+				div.timestamp {{ user.createdAt | date : 'MM/dd/yyyy HH:mm:ss a' }}
+				div {{ user.role }}
