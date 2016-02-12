@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ui.router', 'ngMessages', 'ui.bootstrap', 'HomeService']);
+var app = angular.module('myApp',['ui.router', 'ngMessages', 'ui.bootstrap', 'HomeService', 'UserService']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
