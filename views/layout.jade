@@ -16,8 +16,11 @@ html(ng-app="myApp")
     script(src='/libs/bootstrap/dist/js/bootstrap.min.js')
     
     // Services
+    script(src='/app/services/homeService.js')
     
     // Controllers, etc...
     script(src='/app/main.js')
+    script(src='/app/controllers/homePageController.js')
+    script(src='/app/controllers/lobbyPageController.js')
 
     div(ui-view)

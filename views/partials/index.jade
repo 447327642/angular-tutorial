@@ -1,2 +1,18 @@
 h1 Angular JS Tutorial
 p Welcome to Angular Tutorial
+
+div.progress
+	div.progress-bar.progress-bar-info(style='width: 100%')
+form#loginForm.form-horizontal(name="loginForm", ng-controller="homePageController")
+	fieldset
+		div.form-group
+			div.col-lg-4
+				input#username.form-control(name="username", placeholder='Username', type='text', ng-model='username')
+			div.col-lg-4
+				p You typed in: {{username}}
+		div.form-group
+			span.col-lg-10
+				button#loginButton.btn.btn-info(ng-click='login()') Login
+				span(style='padding-right: 10px')
+
+

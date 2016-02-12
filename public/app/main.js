@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ui.router', 'ngMessages', 'ui.bootstrap']);
+var app = angular.module('myApp',['ui.router', 'ngMessages', 'ui.bootstrap', 'HomeService']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
@@ -6,5 +6,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       templateUrl: 'partials/index.jade'
+    })
+    .state('lobby', {
+    	url: '/lobby',
+    	templateUrl: 'partials/lobby.jade'
     });
 });
