@@ -27,7 +27,7 @@ angular.module('myApp')
 		};
 
 		$scope.getAllUsers = function () {
-		 	UserFactory.getAll($scope.messageType, $scope.username, $scope.buddy, $scope.username)
+		 	UserFactory.getAll()
 		 		.success(function(data, status, headers, config) {
 		 			$scope.users = data;
 		 			console.log($scope.users);
@@ -35,10 +35,6 @@ angular.module('myApp')
 		 		.error(function(data, status, headers, config) {
 
 		 		});
-		};
-
-		$scope.changeOrder = function() {
-			$scope.ord = $scope.order.id;
 		};
 
 		$scope.getAllUsers();
